@@ -3,7 +3,7 @@
 ; Title:  Assignment 1.5
 ; Author: Albert Einstein
 ; Date:   25 June 2017
-; Modified By: <Your name>
+; Modified By: William Tyson Thomason
 ; Description: This program demonstrates the
 ;   use of JavaScript types, values, and 
 ;   and variables in an application.
