@@ -41,6 +41,7 @@ var dplaces = payRate == parseInt(payRate, 10) ? 0 : 2;
 payRate = '$' + payRate.toFixed(dplaces);
 var hireDate = new Date(2017, 6, 12).toLocaleDateString();
 
+
 var employee = "\nEmployee" + "\nFirst Name: " + firstName + "\nMiddle Name: " + middleName +  "\nLast Name: " + lastName + "\nAdress: "
     + street + " " + city + ", " + state + " " + zip + "\nPay Rate: " + payRate +  "\nHire Date: " + hireDate;
 
