@@ -44,15 +44,27 @@ function convertToInt(string){
 
 // Parse the string parameter and return the value as a parseFloat and formated with a $ sign
 function convertToFloat(string){
-  return "$" + parseFloat(string);
+  return parseFloat(string);
 }
 
-//OUTPUT STARTS HERE
+//OUTPUT CODE STARTS HERE
 console.log("Hello my name is " + fullName("william", "Thomason") + "!" + "\n");
 
-console.log("Today's date is " + dateWriter(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) + " and the current temperature is 33.5 degrees." + "\n");
+console.log("Today's date is " + dateWriter(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) + " and the current temperature is " + formatNumber(32.123, 2) + " degrees." + "\n");
 
-console.log("I am " + convertToInt("32") + " years old and my savings account goal is " + convertToFloat("500.32") + " dollars.\n");
+console.log("I am " + convertToInt("32") + " years old and my savings account goal is " + "$" + convertToFloat("500.32") + " dollars.\n");
 
+/*
 // Test console.log for the formatNumber function
-//console.log(formatNumber(32, 2));
+console.log(formatNumber(32.123, 2));
+
+console.log("Did the string in convertToInt change to a number? ", !isNaN(convertToInt("49.4")));
+
+console.log("Did the string in convertToInt change to an integer? ", Number.isInteger(convertToInt("49.4")));
+
+console.log("Test of convertToFloat function:", convertToFloat("842.57"));
+
+console.log("Did the string in convertToFloat change to a number? ", !isNaN(convertToFloat("49.4")));
+
+console.log("Did the string in convertToFloat change to a integer? ", Number.isInteger(convertToFloat("842.57")));
+*/
