@@ -1,7 +1,7 @@
 /*
 ============================================
 ; Title:  thomason-assignment-2.4.js
-; Author: William T. Thomason 
+; Author: William T. Thomason
 ; Date:   5 December 2018
 ; Modified By: William T. Thomason
 ; Description: Displays a formatted header
@@ -25,7 +25,7 @@ function fullName(firstName, lastName){
 }
 
 /*
-takes in year, month and day parameters (for todays date pag the new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) returns them with the .toLocalDateString 
+takes in year, month and day parameters (for todays date pag the new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) returns them with the .toLocalDateString
 format
 */
 function dateWriter(year, month, day){
