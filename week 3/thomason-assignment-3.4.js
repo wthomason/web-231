@@ -12,18 +12,16 @@ const header = require('../thomason-header.js');
 
 console.log(header.display("William", "Thomason", "Assignment 3.4"));
 
-/**
- * Params: n/a
- * Response: integer value
- * Description: Returns a random integer value
- * Disclaimer: Do not remove this function as this is what you will be using to generate a random number
- */
+
+ // Disclaimer: Do not remove this function as this is what you will be using to generate a random number
+
 function randomNumber() {
   return Math.floor((Math.random() * 10) + 1)
 }
 
 // Variables defined here
-var exampleVar1= 4;
+var exampleVar= 4;
+
 
 // Functions now defined
 function match (firstParam, secondParam) {
@@ -41,17 +39,21 @@ function logMatch (matchFirstParam, matchSecondParam) {
   console.log(matchFirstParam + " does match " + matchSecondParam + "!");
 };
 
+
 // Console logs title of game
 console.log("\n-- DO THE NUMBERS MATCH GAME --");
+
 
 // For loop testing match against a random number
 for (var x = 0; x < 10; x++) {
   var randomVar = randomNumber();
-  if (match (exampleVar1, randomVar)){
-    logMatch(exampleVar1, randomVar);
+  if (match (exampleVar, randomVar)){
+    logMatch(exampleVar, randomVar);
   } else {
-    logMismatch(exampleVar1, randomVar);
+    logMismatch(exampleVar, randomVar);
   };
 };
+
+
 
 //End Program
