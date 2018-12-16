@@ -12,35 +12,46 @@ const header = require('../thomason-header.js');
 
 console.log(header.display("William", "Thomason", "Assignment 3.4"));
 
-console.log('\n')
+/**
+ * Params: n/a
+ * Response: integer value
+ * Description: Returns a random integer value
+ * Disclaimer: Do not remove this function as this is what you will be using to generate a random number
+ */
+function randomNumber() {
+  return Math.floor((Math.random() * 10) + 1)
+}
 
-let num = 6;
+// Variables defined here
+var exampleVar1= 4;
 
-for (var i = 0; i < 10; i++) {
+// Functions now defined
+function match (firstParam, secondParam) {
+  if (firstParam === secondParam)
+    return true;
+  else
+    return false;
+};
 
-  let num2 = Math.floor((Math.random() * 10) + 1)
-   match(num, num2)
-  if (match(num, num2)) {
-    logMatch(num, num2);
+function logMismatch (mismatchFirstParam, mismatchSecondParam) {
+  console.log(mismatchFirstParam + " does not match " + mismatchSecondParam + "!");
+};
+
+function logMatch (matchFirstParam, matchSecondParam) {
+  console.log(matchFirstParam + " does match " + matchSecondParam + "!");
+};
+
+// Console logs title of game
+console.log("\n-- DO THE NUMBERS MATCH GAME --");
+
+// For loop testing match against a random number
+for (var x = 0; x < 10; x++) {
+  var randomVar = randomNumber();
+  if (match (exampleVar1, randomVar)){
+    logMatch(exampleVar1, randomVar);
   } else {
-    logMisMatch(num, num2);
-  }
-}
+    logMismatch(exampleVar1, randomVar);
+  };
+};
 
-function match(param1, param2) {
-  if (param1 === param2) {
-
-    return true
-  } else {
-
-    return false
-  }
-}
-
-function logMisMatch(param1, param2) {
-  console.log(param1 + " does not match " + param2 + '!');
-}
-
-function logMatch(param1, param2) {
-  console.log(param1 + " does match " + param2 + '!');
-}
+//End Program
