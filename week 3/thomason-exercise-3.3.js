@@ -17,7 +17,7 @@ console.log(header.display("William", "Thomason", "Exercise 3.3"));
 
 
 //VARIABLES
-let eventKeyCode = 13
+let eventKeyCode = 13;
 
 //CREATES GAP BETWEEN HEADER AND OUTPUT
 console.log("\n");
