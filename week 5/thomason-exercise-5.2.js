@@ -12,17 +12,12 @@ const header = require('../thomason-header.js');
 console.log(header.display("William", "Thomason", "Exercise 5.2") + "\n");
 
 
-/*
-  Expected output:
+//VARIABLES
+var foods = ["Oysters", "Shrimp", "Steak", "Tacos", "Sushi"];
 
-  FirstName LastName
-  Exercise 5.2
-  Today's Date
+//OUTPUT
+foods.forEach(function(food){
+  console.log(food);
+});
 
-  Oysters
-  Shrimp
-  Steak
-  Tacos
-  Sushi
-
-*/
+//END PROGRAM
