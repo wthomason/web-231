@@ -12,43 +12,61 @@ const header = require('../thomason-header.js');
 console.log(header.display("William", "Thomason", "Assignment 5.4") + "\n");
 
 
-/*
-  // Below is what I am expecting to see when I run your program - remove this before submitting your work
-  // 50% of you will not read this and lose 25% of the awardable points.
+//arry of composers
+var composers= [
+  {
+      lastName:'Beethoven',
+      genre:'Classical',
+      rating:8,
 
-  FirstName LastName
-  Assignment 5.4
-  Today's Date
+  },
 
-  -- COMPOSER BY RATING --
-  Rating: 8
-  Composer: Beethoven
+  {
+      lastName:'Mozart',
+      genre:'Classical',
+      rating:10,
+  },
 
-  Rating: 10
-  Composer: Mozart
+  {
+      lastName:"Bach",
+      genre:"Classical",
+      rating:9,
+  },
+  {
+      lastName:"Hayden",
+      genre:"Classical",
+      rating:6,
+  },
+  {
+      lastName:"Schubert",
+      genre:"Classical",
+      rating:5,
+  }
+]
 
-  Rating: 9
-  Composer: Bach
+//creating new filtered arrays with the map methods
+var genre = composers.map(function(composer){
+return "Genre: "+ composer.genre + "\n" + "LastName: "+ composer.lastName;
 
-  Rating: 6
-  Composer: Haydn
+})
 
-  Rating: 5
-  Composer: Schubert
+var rating = composers.map(function(composer){
+  return "Rating: "+ composer.rating + "\n" + "LastName: "+ composer.lastName;
 
-  -- COMPOSER BY GENRE --
-  Genre: Classical
-  Composer: Beethoven
+  })
 
-  Genre: Classical
-  Composer: Mozart
+//outputting the new arrays with the forEach() method
 
-  Genre: Classical
-  Composer: Bach
+console.log("--COMPOSER BY RATING--")
 
-  Genre: Classical
-  Composer: Haydn
+rating.forEach(function(y){
+  console.log(y + "\n")
+  })
 
-  Genre: Classical
-  Composer: Schubert
-*/
+
+console.log("--COMPOSER BY GENRE--")
+genre.forEach(function(y){
+console.log(y + "\n")
+})
+
+//END PROGRAM
