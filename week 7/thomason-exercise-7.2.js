@@ -1,13 +1,4 @@
 /*
-  Expected output:
-  1 Thomas Edison Software Engineer
-  2 Benjamin Franklin Programmer
-  3 Nikola Tesla Project Manager
-  4 Charles Babbage Product Manager
-  5 Alexander Bell Business Analyst
-*/
-
-/*
 ============================================
 ; Title:  Exercise 7.2
 ; Author: William Thomason
