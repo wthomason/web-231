@@ -14,9 +14,69 @@
   <title>Assignment 7.4</title>
   
   <link rel="stylesheet" href="../site.css">
-
+  <script>
+      //OBJECT CREATED AS A FUNCTION
+    function Item(id, name, amount) {
+    
+    this.id = id;
+    
+    this.name = name;
+    
+    this.amount = amount;
+    
+    }
+    
+    
+    var items = [
+    
+    new Item(1, "Laptop", "1500.99"),
+    
+    new Item(2, "Motherboard", "33.70"),
+    
+    new Item(3, "Monitor", "174.99"),
+    
+    new Item(4, "Mouse", "13.99"),
+    
+    new Item(5, "Keyboard", "14.50")
+    
+    ];
+    
+    </script>
 </head>
 <body>
-
+    <h1>Computer Components</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Functions</th>
+        </tr>
+      </thead>
+      <tbody>
+       <!-- Loop through object to ouput table data and links-->
+       <script>
+        items.forEach(function(y){
+          document.write("<tr><td>" +
+             y.id + //ouputs item Id
+            "</td><td>" +
+            y.name + //ouputs item name
+            "</td><td>" +
+            "$" + 
+            y.amount +  //outputs item amount
+            "</td><td>" + 
+            "<a href='javascript:alert(" + y.id + ");'>EDIT</a>" + //outputs link and when clicked alerts item Id
+            " | " +
+            '<a href="#" onclick="confirm(' + "'Are you Sure?'" + ');">DELETE</a>' + //outputs a link when clicked confirmation box will appear
+            "</td></tr>"
+            )
+          });
+        </script>
+      </tbody>
+    </table>
+    
 </body>
+
+
 </html>
