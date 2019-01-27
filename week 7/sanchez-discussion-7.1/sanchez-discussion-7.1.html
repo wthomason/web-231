@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Title: Discussion Board-7.1.html
+Date: 1/24/2019
+Author: Gabriel Sanchez
+Description: JavaScript Web Browser
+-->
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Planets</title>
+</head>
+<body>
+	<h1>What Planet do we live in?</h1>
+	<div id="wrapper">
+        <!-- This function will ask you in what planet we live in -->
+		<script>
+		      function question() //No function name
+		      {
+            var y1 = document.getElementById('planet').value;
+
+            //alert(y1); //used this alert to test if the function was working and the variable was pulling input data
+
+		        if(y1 == "Earth" || y1 == "earth") {
+
+		         alert("Correct"); //Needed a semi Colon and doesn't need an = sign after alert
+		        }
+		        else {
+		            alert("Try Again"); //Needed a semi Colon and doesn't need an = sign after alert
+		        }
+            //var oper = document.getElementById('planet').value = alert; //I have no idea what this is here for.....
+
+		      }
+		</script>
+		<div>
+      Give me your best answer <input id="planet" maxlength="30" size="11" type="text"> <button id="earth" onclick="question();">Enter</button>
+      <!--
+        The input field was xxxx
+        The ID of the button were xx
+        No onclick on the button
+      -->
+		</div>
+	</div>
+	<footer id="footer"></footer>
+</body>
+</html>
