@@ -1,3 +1,12 @@
+<!--
+============================================
+; Title:  thomason-exercise-8.2.html
+; Author: William Thomason
+; Date:   30 January 2019
+; Modified by:
+; Description: Dynamic HTML
+;===========================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +24,38 @@
 <div id="fruits"></div>
 
 <script>
+  function Fruit(id, fruitName) {
+
+  this.id = id;
+
+  this.fruitName = fruitName;
+
+  }
+
+
+  var fruitsList = [
+
+  new Fruit(1, "Apple"),
+
+  new Fruit(2, "Avocado"),
+
+  new Fruit(3, "Pineapples"),
+
+  new Fruit(4, "Kiwis"),
+
+  new Fruit(5, "Bananas")
+
+  ];
+
+     document.getElementById("fruits").innerHTML = "<h1>Fruit List</h1>" +
+      "<ul>" +
+      fruitsList.forEach(function(y){
+        "<li>" + y.fruitName + "</li>"
+      }) +
+      "</ul>";
+
+
+
 
 </script>
 
