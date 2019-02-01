@@ -6,7 +6,24 @@
 ; Description: Global styling for week's 7 through 9
 ;===========================================
 */
+html{
+  font-family: 'Roboto', sans-serif;
+}
 
+nav{
+  background-color: aqua;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#fruits, #main{
+  margin-left: 20px;
+}
+
+/*
+Professor Krasso css starts here
+*/
 table {
     border-collapse: collapse;
   }
@@ -25,3 +42,7 @@ table {
   tr:nth-child(even) {
     background-color: lightsteelblue;
   }
+
+/*
+Professor Krasso css ends here
+*/

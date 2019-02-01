@@ -13,15 +13,102 @@
   <meta charset="UTF-8">
 
   <title>Exercise 8.3</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- you will need to the href to point to your root directories css file -->
-  <link rel="stylesheet" href="/path/to/your/root/css/file">
+  <link rel="stylesheet" href="../site.css">
 
 </head>
 <body>
 
+  <nav> 
+    <h1>Top Bar</h1>
+  </nav>
+
+  <div id="main">
+  <h1>Title of Paragraph</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non justo sed dolor 
+    suscipit pellentesque eu nec sapien. Nullam sit amet fermentum nunc. Fusce scelerisque 
+    tempor massa, in faucibus justo fringilla non. Nunc neque neque, laoreet at metus sed, 
+    consectetur iaculis est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
+    gravida eros nec sagittis suscipit. Praesent a metus quam. Quisque id aliquam lectus. Curabitur 
+    fermentum lectus sed nulla scelerisque lobortis. Suspendisse rutrum nulla turpis, eu accumsan 
+    arcu pulvinar eget. Nulla non lacus ex. Aliquam imperdiet quam ante, eget maximus enim feugiat 
+    a. Nam interdum nulla et augue convallis eleifend. Donec fringilla pellentesque massa, et fringilla
+    enim suscipit vel. Vivamus ac pulvinar odio, eget vehicula nibh. Donec iaculis nisi nec mi aliquet,
+      id dictum justo mattis.</p>
+  
+  <button type="button" name="toggle">Toggle</button>
+  </div>
+  <div id="fruits"></div>
+
 <script type="text/javascript">
+
+$(document).ready(function(){
+
+  //click event for the button to toggle (show/hide) the paragraph 
+  $("button").click(function(){
+    $("p").toggle();
+  });
+
+  //Fruit object
+  function Fruit(id, fruitName) {
+
+    this.id = id;
+
+    this.fruitName = fruitName;
+
+  }
+
+  var list = "";
+
+    var fruitsList = [
+
+    new Fruit(1, "Apple"),
+
+    new Fruit(2, "Avocado"),
+
+    new Fruit(3, "Pineapples"),
+
+    new Fruit(4, "Kiwis"),
+
+    new Fruit(5, "Bananas")
+
+    ];
+
+//loop through fruit object and store into variable, onclick functionality
+
+      fruitsList.forEach(function(y){
+        list += "<tr><td class='alertId' id='fruitId'>" + y.id + "</td>" + "<td id='fruitName'>" + y.fruitName + "</td></tr>";
+        });
+
+//get element by ID, create table and insert the object variable and onclick functionality
+
+      document.getElementById("fruits").innerHTML = "<h1>Fruit List</h1>" +
+      "<table>" +
+        "<thead>" +
+        "<tr>" +
+        "<th>Id</th><th>Item</th>" +
+        "</tr>" +
+        "</thead>" +
+        "<tbody>" +
+        list +
+        "</tbody>" +
+        "</table>";
+
+//Jquery click function to alert the fruit id and name
+  $(".alertId").click(function(event){
+    
+    event.preventDefault();
+    
+    var fruitId = $(this).text();
+    var fruitName = $(this).closest("td").next().text();
+
+    alert("Fruit ID: " + fruitId + " Fruit Name: " + fruitName );
+  });//END OF CLICK FUNCTION
+
+});//END OF DOCUMENT.READY FUNCTION
 
 </script>
 
