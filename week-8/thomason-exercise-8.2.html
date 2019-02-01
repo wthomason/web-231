@@ -12,15 +12,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Exercise 8.2</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <style type="text/css">
+    html{
+      font-family: 'Roboto', sans-serif;
+    }
     ul {
       list-style: none;
+      margin: 0 auto;
+    }
+
+    #fruits{
+      margin-left: 20px;
+    }
+
+    nav{
+      background-color: aqua;
+      height: 50px;
+      text-align: center;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-
+<nav> <h1>Top Bar</h1></nav>
 <div id="fruits"></div>
 
 <script>
@@ -46,12 +61,15 @@
   new Fruit(5, "Bananas")
 
   ];
+  var list = "";
+
+     fruitsList.forEach(function(y){
+      list += "<li>" + y.fruitName + "</li>";
+      }); 
 
      document.getElementById("fruits").innerHTML = "<h1>Fruit List</h1>" +
       "<ul>" +
-      fruitsList.forEach(function(y){
-        "<li>" + y.fruitName + "</li>"
-      }) +
+      list +
       "</ul>";
 
 
