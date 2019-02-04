@@ -32,7 +32,9 @@
 
 <script type="text/javascript">
 
+//SET THE LIST VARIABLE
 var list = ""
+
   //OBJECT CREATED AS A FUNCTION
   function Employee(id, firstName, lastName, title) {
 
@@ -61,6 +63,7 @@ var list = ""
 
   ];
 
+//getEmployee() that loops through array and alerts the data requested
   function getEmployee(id){
 
     employee.forEach(function(y){
@@ -71,13 +74,15 @@ var list = ""
 
   }//END OF getEmployee() FUNCTION
 
+//LOOP OVER TABLE ROW WITH EMPLOYEE DATA STORED INTO list VARIABLE
   employee.forEach(function(y){
 
     list += "<tr><td>" + y.id + "</td>" + "<td>" + y.firstName + "</td>"+ "<td>" + y.lastName + "</td>" + "<td>" + y.title + "</td></tr>";
 
   });
 
-  output = "<h1>Fruit List</h1>" +
+//VARIABLE WITH OUPUT TABLE AND HEADING
+  output = "<h1>Employee List</h1>" +
       "<table class='tableHover'>" +
         "<thead>" +
         "<tr>" +
@@ -89,20 +94,18 @@ var list = ""
         "</tbody>" +
         "</table>";
 
+//PLACING THE OUTPUT INTO THE DIV WITH AN ID OF emps VIA getElementById
     document.getElementById("emps").innerHTML = output;
 
   // jQuery onClick event
   // Don't remove this, just add your code to the body of the event (curly braces)
   $(function () {
     $("table tr").click(function () {
-      //alert("inside jquery function");
+
       var id =  $(this).find('td:first').html()
       getEmployee(id);
     })
   });
-
-
-
 
 </script>
 
